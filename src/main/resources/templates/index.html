@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+  <title>Spring core online tutorial</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.5/css/bootstrap.min.css"
+        th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+        rel="stylesheet" media="screen"/>
+  <script src="http://cdn.jsdeliver.net/webjars/jquery/2.1.4/jquery.min.js"
+          th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+  <link href="../static/css/spring-core.css"
+        th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+  <h1>
+    Customers main page
+  </h1>
+
+  <h2>
+    this is my thymeleaf index.html page.
+  </h2>
+  <h3><a th:href="${'/products'}">View All products</a></h3>
+  <h3><a th:href="${'/customers'}">View All customers</a></h3>
+</div>
+
+</body>
+</html>

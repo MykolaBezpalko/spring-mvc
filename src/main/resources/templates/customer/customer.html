@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring core online tutorial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.5/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <script src="http://cdn.jsdeliver.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+    <link href="../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Show Customer details</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Customer Id:</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.id}">Customer id</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">First Name:</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.firstName}">First Name</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Last Name:</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.lastName}">Last Name</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.email}">email</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Phone number</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.phoneNumber}">phone number</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Address One</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.addressLineOne}">Address One</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Address Two</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.email}">addressLineTwo</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.city}">City</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Post Code</label>
+                    <div class="col-sm-10">
+                        <p class="gorm-control-static" th:text="${customer.zipCode}">Post Code</p>
+                    </div>
+                </div>
+            </form>
+            <a th:href="${'/customers'}"/>Back to Customers list</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
